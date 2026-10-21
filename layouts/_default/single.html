@@ -31,6 +31,14 @@
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
 
+  {{- if ne site.Params.busuanzi.enable false }}
+  <div class="busuanzi-page" aria-label="本文阅读量">
+    <span id="busuanzi_container_page_pv">
+      阅读 <span id="busuanzi_value_page_pv"></span> 次
+    </span>
+  </div>
+  {{- end }}
+
   {{- if .Content }}
   <div class="post-content md-content">
     {{- if not (.Param "disableAnchoredHeadings") }}

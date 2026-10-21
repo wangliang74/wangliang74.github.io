@@ -21,6 +21,9 @@ hasCJKLanguage = true
   [params.sidebar]
     sections = ['cpp', 'ai', 'project']
 
+  [params.busuanzi]
+    enable = true
+
 [menu]
   [[menu.main]]
     identifier = 'home'

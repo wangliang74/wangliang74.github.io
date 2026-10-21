@@ -1,0 +1,28 @@
+.busuanzi {
+  max-width: calc(var(--docs-layout-max, var(--main-width)) + var(--gap) * 2);
+  margin: 0 auto;
+  padding: 0 var(--gap) 1.25rem;
+  text-align: center;
+  font-family: var(--font-ui, sans-serif);
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--secondary);
+}
+
+.busuanzi-sep {
+  margin: 0 0.35rem;
+  opacity: 0.6;
+}
+
+.busuanzi-page {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.8125rem;
+  color: var(--secondary);
+}
+
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv,
+#busuanzi_container_page_pv {
+  display: none;
+}
