@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>My New Hugo Project</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2026 09:45:20 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>主页</title>
+      <link>http://localhost:1313/posts/%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Sat, 17 Oct 2026 09:45:20 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E4%B8%BB%E9%A1%B5/</guid>
+      <description>&lt;h1 id=&#34;半杯冷咖啡与未保存的草稿&#34;&gt;半杯冷咖啡与未保存的草稿&lt;/h1&gt;
+&lt;p&gt;有些早晨适合写代码，有些早晨只适合把窗口开一条缝，听楼下早餐店的油锅声。这篇主页没有固定主题，只是把最近在脑子里转圈的片段随手记下。&lt;/p&gt;
+&lt;h1 id=&#34;键盘上的灰尘地图&#34;&gt;键盘上的灰尘地图&lt;/h1&gt;
+&lt;p&gt;笔记本 F 和 J 之间的缝隙里积了一层浅灰，像一张缩小的城市平面图。按键越常用，灰尘反而越少；真正被遗忘的，是那些几乎从不按下的符号键。&lt;/p&gt;
+&lt;p&gt;我开始怀疑自己的工作习惯：如果把按键磨损程度画成热力图，大概会发现一整天都在 &lt;code&gt;Ctrl&lt;/code&gt;、&lt;code&gt;S&lt;/code&gt; 和方向键之间来回搬家。&lt;/p&gt;
+&lt;h1 id=&#34;窗口里的第三棵树&#34;&gt;窗口里的第三棵树&lt;/h1&gt;
+&lt;p&gt;对面楼的阳台种了三盆绿植。左边那盆夏天就黄了，中间那盆永远半死不活，只有最右边那棵还在往外探叶子。&lt;/p&gt;
+&lt;p&gt;有天傍晚我盯着它看了很久，才意识到自己并不是在观察植物，而是在找一个不必立刻打开编辑器的理由。&lt;/p&gt;
+&lt;h1 id=&#34;未命名文件夹&#34;&gt;未命名文件夹&lt;/h1&gt;
+&lt;p&gt;桌面上躺着一个叫 &lt;code&gt;新建文件夹 (3)&lt;/code&gt; 的目录，里面有截图、半截笔记、一份过期的会议纪要，以及一张不知道什么时候拍的月亮。&lt;/p&gt;
+&lt;p&gt;整理它的冲动每隔两周出现一次，持续大约九十秒。然后我会打开终端，假装自己有更紧急的事情。&lt;/p&gt;
+&lt;h1 id=&#34;关于稍后阅读&#34;&gt;关于「稍后阅读」&lt;/h1&gt;
+&lt;p&gt;浏览器收藏夹里有一个叫「稍后」的分组，条目已经多到滚动条细得像一根线。里面有编译器原理、城市步行指南、以及一篇三年前收藏、标题已经完全忘记的文章。&lt;/p&gt;
+&lt;p&gt;「稍后」从来不是时间规划，它更像一种温和的自我安慰：至少我曾经想过要认真对待这件事。&lt;/p&gt;
+&lt;h1 id=&#34;雨停之后的编译错误&#34;&gt;雨停之后的编译错误&lt;/h1&gt;
+&lt;p&gt;昨晚下过雨。今天打开项目，终端里跳出一串红色。报错信息和天气无关，但心情有关。修 bug 的时候我会把椅子转半圈，看窗外地面积水慢慢退下去。&lt;/p&gt;
+&lt;p&gt;等积水只剩几块不规则的镜子，那行报错也通常被我改掉了。这当然不是方法论，只是巧合长得像仪式。&lt;/p&gt;
+&lt;h1 id=&#34;抽屉里的旧耳机&#34;&gt;抽屉里的旧耳机&lt;/h1&gt;
+&lt;p&gt;右边抽屉里有一副线已经打结的耳机。它不再发出声音，却还占着一个位置，好像在提醒我：有些东西被留下，不是因为有用，而是因为扔掉需要做决定。&lt;/p&gt;
+&lt;p&gt;代码仓库里的注释有时也是这样。没有人再调用它，删掉却总觉得会少一块什么。&lt;/p&gt;
+&lt;h1 id=&#34;夜间模式与真实时间&#34;&gt;夜间模式与真实时间&lt;/h1&gt;
+&lt;p&gt;把编辑器切到深色主题之后，时间感会变差。屏幕亮着的时候，凌晨两点和晚上九点长得差不多。直到冰箱压缩机突然响起来，我才意识到整栋楼大概只剩我还醒着。&lt;/p&gt;
+&lt;p&gt;于是保存文件，关灯，把未写完的句子留给明天的自己——那个更清醒、也更可能把这段话删掉的人。&lt;/p&gt;
+&lt;h1 id=&#34;下一站仍未命名&#34;&gt;下一站仍未命名&lt;/h1&gt;
+&lt;p&gt;如果这篇主页需要一个结尾，那就写在这里：没有路线图，没有更新计划，只有一些会被继续追加的段落。下一次打开这个文件时，也许会多一棵树、少一个文件夹，或者把「稍后」里的某一篇终于读完。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
