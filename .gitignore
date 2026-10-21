@@ -1,0 +1,13 @@
+# Hugo 构建产物（由 GitHub Actions 在云端生成）
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# 操作系统
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 编辑器临时文件
+*.swp
+*~
