@@ -17,3 +17,9 @@ https://wangliang74.github.io/
 ```bash
 hugo server -D
 ```
+
+## 许可
+
+本仓库原创内容（文章、自定义布局与样式等）采用 **保留所有权利 (All Rights Reserved)**，详见 [LICENSE](./LICENSE)。
+
+主题 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 为 MIT 许可，位于 `themes/PaperMod/`。

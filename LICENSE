@@ -1,0 +1,66 @@
+================================================================================
+中文版 / Chinese
+================================================================================
+
+版权所有 (c) 2026 王亮 (Wang Liang)
+
+保留所有权利 (All Rights Reserved)
+
+本仓库中由版权持有人创作的内容，包括但不限于：
+
+- content/ 目录下的文章与页面文案
+- 本仓库根目录下的自定义布局、样式、配置与脚本（不含下列第三方组件）
+
+未经版权持有人事先书面许可，任何个人或组织不得复制、修改、合并、发布、
+分发、再授权、出售或商业利用上述内容，亦不得以其他方式使用上述内容。
+
+允许的行为（在不违反上述条款的前提下）：
+
+- 为个人学习、研究而本地克隆、构建与浏览
+- 在引用时注明出处且仅作合理引用（不构成整体复制或再发布）
+
+第三方组件
+
+本博客使用 Hugo 静态站点生成器及 PaperMod 等第三方软件，其各自适用原项目的
+开源许可证（例如 themes/PaperMod 为 MIT License）。第三方组件的版权与许可
+条款由相应项目单独提供，本文件不对第三方组件另行授权。
+
+- Hugo: https://gohugo.io/
+- PaperMod: https://github.com/adityatelange/hugo-PaperMod
+
+
+================================================================================
+English Version
+================================================================================
+
+Copyright (c) 2026 Wang Liang (王亮)
+
+All Rights Reserved
+
+Content in this repository created by the copyright holder includes, but is
+not limited to:
+
+- Articles and page text under content/
+- Custom layouts, styles, configuration, and scripts at the repository root
+  (excluding third-party components listed below)
+
+Without prior written permission from the copyright holder, no person or
+organization may copy, modify, merge, publish, distribute, sublicense, sell,
+or commercially exploit such content, or use it in any other manner.
+
+Permitted activities (subject to the restrictions above):
+
+- Cloning, building, and viewing locally for personal study and research
+- Fair quotation with proper attribution, where such use does not constitute
+  reproduction or redistribution of the work as a whole
+
+Third-Party Components
+
+This blog uses third-party software such as the Hugo static site generator and
+the PaperMod theme. Each is governed by its own license (for example,
+themes/PaperMod is under the MIT License). Copyright and license terms for
+third-party components are provided by their respective projects. This file
+does not grant any rights to third-party components.
+
+- Hugo: https://gohugo.io/
+- PaperMod: https://github.com/adityatelange/hugo-PaperMod
