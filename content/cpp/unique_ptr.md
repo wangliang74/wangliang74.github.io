@@ -1,5 +1,5 @@
 ---
-title: "智能指针备忘"
+title: "unique_ptr"
 date: 2026-10-12T14:30:00+08:00
 draft: false
 weight: 2
