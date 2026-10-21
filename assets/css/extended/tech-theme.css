@@ -3,7 +3,7 @@
 :root {
   --font-ui: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-sans: var(--font-ui);
-  --font-reading: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --font-reading: "LXGW WenKai", "LXGW WenKai Screen", "PingFang SC", "Microsoft YaHei UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
   --tech-accent: #2ee6d6;
   --tech-accent-dim: rgba(46, 230, 214, 0.45);
@@ -110,25 +110,36 @@ body.tech-site .docs-content .post-content.md-content {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* 中间正文：衬线 + 略大行距，长文更易读 */
+/* 中间正文：霞鹜文楷，偏屏幕阅读 */
 body.tech-site .docs-content .post-content.md-content {
   font-family: var(--font-reading);
-  font-size: 0.9375rem;
-  line-height: 1.85;
-  letter-spacing: 0.02em;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body.tech-site .docs-content .post-content.md-content h1,
+body.tech-site .docs-content .post-content.md-content h2,
+body.tech-site .docs-content .post-content.md-content h3 {
+  font-family: var(--font-reading);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35em;
 }
 
 body.tech-site .docs-content .post-content.md-content h1 {
-  font-size: 1.45rem;
+  font-size: 1.4rem;
 }
 
 body.tech-site .docs-content .post-content.md-content h2 {
-  font-size: 1.2rem;
+  font-size: 1.18rem;
 }
 
 body.tech-site .docs-content .post-content.md-content h3 {
-  font-size: 1.05rem;
+  font-size: 1.06rem;
 }
 
 body.tech-site .docs-content .post-content.md-content h4,
@@ -144,14 +155,6 @@ body.tech-site .docs-content .post-content.md-content pre {
 
 body.tech-site .docs-content .post-content.md-content code {
   font-size: 0.85em;
-}
-
-body.tech-site .docs-content .post-content.md-content h1,
-body.tech-site .docs-content .post-content.md-content h2,
-body.tech-site .docs-content .post-content.md-content h3 {
-  font-family: var(--font-ui);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.35em;
 }
 
 body.tech-site .docs-content .post-content.md-content hr {
