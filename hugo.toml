@@ -1,4 +1,40 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
-theme = "PaperMod"
+baseURL = 'https://wangliang74.github.io/'
+languageCode = 'zh-cn'
+title = '王亮的博客'
+theme = 'PaperMod'
+defaultContentLanguage = 'zh'
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = 'production'
+  defaultTheme = 'dark'
+  ShowReadingTime = true
+  ShowBreadCrumbs = false
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  UseHugoToc = true
+
+  [params.sidebar]
+    sections = ['cpp', 'ai', 'project']
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = '首页'
+    url = '/'
+    weight = 1
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+    ordered = false

@@ -1,0 +1,86 @@
+:root {
+  --docs-toc-width: 220px;
+}
+
+.docs-toc {
+  flex: 0 0 var(--docs-toc-width);
+  position: sticky;
+  top: calc(var(--header-height) + var(--gap));
+  max-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--gap) * 2);
+  overflow: auto;
+  padding: 0 4px 12px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.docs-toc-head {
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.docs-toc-nav {
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.docs-toc-nav nav#TableOfContents,
+.docs-toc-nav > nav {
+  margin: 0;
+}
+
+.docs-toc-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-toc-nav ul ul {
+  margin-left: 0.75rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--border);
+}
+
+.docs-toc-nav li + li {
+  margin-top: 6px;
+}
+
+.docs-toc-nav a {
+  display: block;
+  color: var(--secondary);
+  text-decoration: none;
+  padding: 2px 0;
+  transition: color 0.15s ease;
+}
+
+.docs-toc-nav a:hover {
+  color: var(--tech-accent, var(--primary));
+  text-decoration: none;
+}
+
+/* legacy toc.html（details）在右侧栏内展平 */
+.docs-toc-nav--legacy details.toc {
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+
+.docs-toc-nav--legacy details.toc summary {
+  display: none;
+}
+
+.docs-toc-nav--legacy details.toc .inner {
+  padding: 0;
+}
+
+@media (max-width: 1180px) {
+  .docs-toc {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+{{- define "main" -}}
+<article class="post-single tech-home">
+  <div class="tech-hero">
+    <div class="tech-terminal" role="presentation">
+      <div class="tech-terminal-bar">
+        <span></span><span></span><span></span>
+        <code class="tech-terminal-title">session — zsh</code>
+      </div>
+      <pre class="tech-terminal-body"><code>$ ls ./modules/
+cpp/   ai/   project/
+
+$ echo $STATUS
+在线 · 静态构建 · GitHub Pages
+
+$ open docs
+→ 从左侧导航选择模块与文档</code></pre>
+    </div>
+  </div>
+  <header class="post-header">
+    <p class="tech-kicker">SYSTEM // OVERVIEW</p>
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  {{- if .Content -}}
+  <div class="post-content md-content tech-panel">
+    {{- partial "anchored_headings.html" .Content -}}
+  </div>
+  {{- end -}}
+</article>
+{{- end -}}

@@ -1,0 +1,37 @@
+{{- $current := . -}}
+<aside class="docs-sidebar" aria-label="文档导航">
+  <div class="docs-sidebar-head">
+    <span class="docs-sidebar-dot"></span>
+    <span class="docs-sidebar-label">文章导航</span>
+  </div>
+  <nav class="docs-nav">
+    {{- range site.Params.sidebar.sections -}}
+      {{- $slug := . -}}
+      {{- $sec := site.GetPage (printf "/%s" $slug) -}}
+      {{- if $sec -}}
+        <div class="docs-nav-group">
+          <a
+            class="docs-nav-l1{{ if eq $current.Section $slug }} is-active{{ end }}"
+            href="{{ $sec.RelPermalink }}"
+          >
+            <span class="nav-prefix">#</span>
+            <span class="nav-name">{{ $sec.Title }}</span>
+          </a>
+          <ul class="docs-nav-l2">
+            {{- range $sec.RegularPages.ByWeight -}}
+              <li>
+                <a
+                  class="{{ if eq $current.RelPermalink .RelPermalink }}is-active{{ end }}"
+                  href="{{ .RelPermalink }}"
+                >
+                  <span class="nav-chevron">&gt;</span>
+                  <span>{{ .Title }}</span>
+                </a>
+              </li>
+            {{- end -}}
+          </ul>
+        </div>
+      {{- end -}}
+    {{- end -}}
+  </nav>
+</aside>

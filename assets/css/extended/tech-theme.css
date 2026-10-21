@@ -1,0 +1,259 @@
+/* 科技感主题：字体、背景、顶栏与正文面板 */
+
+:root {
+  --font-ui: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: var(--font-ui);
+  --font-reading: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
+  --tech-accent: #2ee6d6;
+  --tech-accent-dim: rgba(46, 230, 214, 0.45);
+  --tech-accent-glow: rgba(46, 230, 214, 0.15);
+  --tech-violet: #8b7cf6;
+  --tech-panel: rgba(18, 24, 38, 0.72);
+  --tech-grid: rgba(46, 230, 214, 0.045);
+}
+
+html[data-theme="light"] {
+  --tech-accent: #0891b2;
+  --tech-accent-dim: rgba(8, 145, 178, 0.5);
+  --tech-accent-glow: rgba(8, 145, 178, 0.12);
+  --tech-violet: #6366f1;
+  --tech-panel: rgba(255, 255, 255, 0.85);
+  --tech-grid: rgba(8, 145, 178, 0.06);
+}
+
+body.tech-site {
+  font-family: var(--font-ui);
+  background-color: var(--theme);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--tech-accent-glow), transparent 55%),
+    linear-gradient(var(--tech-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tech-grid) 1px, transparent 1px);
+  background-size: auto, 28px 28px, 28px 28px;
+  background-attachment: fixed;
+}
+
+body.tech-site .header {
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--theme) 88%, transparent);
+  border-bottom: 1px solid var(--tech-accent-dim);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+body.tech-site .logo a {
+  font-family: var(--font-ui);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+
+body.tech-site .logo a::before {
+  content: none;
+}
+
+body.tech-site .menu a {
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+body.tech-site .menu a:hover {
+  color: var(--tech-accent);
+}
+
+/* 正文区面板 */
+body.tech-site .docs-content .post-single,
+body.tech-site .docs-content .page-header + .post-content {
+  position: relative;
+}
+
+body.tech-site .docs-content .post-header .post-title,
+body.tech-site .docs-content .page-header h1 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: linear-gradient(120deg, var(--primary) 0%, var(--tech-accent) 55%, var(--tech-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.tech-site .tech-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--tech-accent);
+  margin: 0 0 0.35rem;
+  opacity: 0.9;
+}
+
+body.tech-site .tech-panel {
+  padding: 1.25rem 1.35rem;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid var(--tech-accent-dim);
+  background: var(--tech-panel);
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--tech-accent) 8%, transparent),
+    0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* 文章内容块：边框与分割线为灰色 */
+body.tech-site .docs-content .post-content.md-content {
+  padding: 1.25rem 1.35rem;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid var(--border);
+  background: var(--tech-panel);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 中间正文：衬线 + 略大行距，长文更易读 */
+body.tech-site .docs-content .post-content.md-content {
+  font-family: var(--font-reading);
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+body.tech-site .docs-content .post-content.md-content h1 {
+  font-size: 1.45rem;
+}
+
+body.tech-site .docs-content .post-content.md-content h2 {
+  font-size: 1.2rem;
+}
+
+body.tech-site .docs-content .post-content.md-content h3 {
+  font-size: 1.05rem;
+}
+
+body.tech-site .docs-content .post-content.md-content h4,
+body.tech-site .docs-content .post-content.md-content h5,
+body.tech-site .docs-content .post-content.md-content h6 {
+  font-size: 0.95rem;
+}
+
+body.tech-site .docs-content .post-content.md-content code,
+body.tech-site .docs-content .post-content.md-content pre {
+  font-family: var(--font-mono);
+}
+
+body.tech-site .docs-content .post-content.md-content code {
+  font-size: 0.85em;
+}
+
+body.tech-site .docs-content .post-content.md-content h1,
+body.tech-site .docs-content .post-content.md-content h2,
+body.tech-site .docs-content .post-content.md-content h3 {
+  font-family: var(--font-ui);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35em;
+}
+
+body.tech-site .docs-content .post-content.md-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  opacity: 1;
+}
+
+body.tech-site .docs-content .post-content.md-content table th,
+body.tech-site .docs-content .post-content.md-content table td {
+  border-color: var(--border);
+}
+
+body.tech-site .docs-content .post-content.md-content h2::before {
+  content: "// ";
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--tech-accent);
+  font-weight: 500;
+}
+
+body.tech-site .post-meta,
+body.tech-site .breadcrumbs {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+body.tech-site .post-meta a:hover,
+body.tech-site .breadcrumbs a:hover {
+  color: var(--tech-accent);
+}
+
+body.tech-site .footer {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.75;
+  border-top: 1px solid var(--tech-accent-dim);
+}
+
+/* 首页终端 */
+.tech-hero {
+  margin-bottom: 1.5rem;
+}
+
+.tech-terminal {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--tech-accent-dim);
+  box-shadow:
+    0 0 32px var(--tech-accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  background: #0c1018;
+}
+
+html[data-theme="light"] .tech-terminal {
+  background: #1a1f2e;
+}
+
+.tech-terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.55rem 0.85rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tech-terminal-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.tech-terminal-bar span:nth-child(2) {
+  background: #febc2e;
+}
+
+.tech-terminal-bar span:nth-child(3) {
+  background: #28c840;
+}
+
+.tech-terminal-title {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.tech-terminal-body {
+  margin: 0;
+  padding: 1rem 1.1rem 1.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: #c8d4e0;
+  overflow-x: auto;
+}
+
+.tech-terminal-body code {
+  font-family: inherit;
+  background: transparent;
+  padding: 0;
+}

@@ -1,0 +1,20 @@
+{{- if and (eq .Kind "page") (.Param "ShowToc") (ne .Layout "search") -}}
+  {{- if .Param "UseHugoToc" -}}
+    {{- with .TableOfContents -}}
+    <aside class="docs-toc" aria-label="本页目录">
+      <div class="docs-toc-head">本页目录</div>
+      <nav class="docs-toc-nav">{{ . }}</nav>
+    </aside>
+    {{- end -}}
+  {{- else -}}
+    {{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
+    {{- if ge (len $headers) 1 -}}
+    <aside class="docs-toc" aria-label="本页目录">
+      <div class="docs-toc-head">本页目录</div>
+      <nav class="docs-toc-nav docs-toc-nav--legacy">
+        {{- partial "toc.html" . -}}
+      </nav>
+    </aside>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
