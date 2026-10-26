@@ -19,6 +19,7 @@
           </a>
           <ul class="docs-nav-l2">
             {{- range $sec.RegularPages.ByWeight -}}
+              {{- if .Title -}}
               <li>
                 <a
                   class="{{ if eq $current.RelPermalink .RelPermalink }}is-active{{ end }}"
@@ -28,6 +29,7 @@
                   <span>{{ .Title }}</span>
                 </a>
               </li>
+              {{- end -}}
             {{- end -}}
           </ul>
         </div>
