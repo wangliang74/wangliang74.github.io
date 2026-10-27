@@ -1,0 +1,6 @@
+.gc-page {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.8125rem;
+  color: var(--secondary);
+}

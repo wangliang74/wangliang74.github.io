@@ -21,8 +21,9 @@ hasCJKLanguage = true
   [params.sidebar]
     sections = ['cpp', 'ai', 'project']
 
-  [params.busuanzi]
-    enable = true
+  # 在 https://www.goatcounter.com 创建站点后，把子域名填到 code
+  [params.goatcounter]
+    code = "wangliang74"
 
 [menu]
   [[menu.main]]

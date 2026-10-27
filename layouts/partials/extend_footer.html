@@ -1,12 +1,4 @@
-{{- if ne site.Params.busuanzi.enable false }}
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="busuanzi" aria-label="访问统计">
-  <span id="busuanzi_container_site_pv">
-    本站访问 <span id="busuanzi_value_site_pv"></span> 次
-  </span>
-  <span class="busuanzi-sep">·</span>
-  <span id="busuanzi_container_site_uv">
-    访客 <span id="busuanzi_value_site_uv"></span> 人
-  </span>
-</div>
+{{- with site.Params.goatcounter.code }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
 {{- end }}

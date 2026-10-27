@@ -31,12 +31,24 @@
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
 
-  {{- if ne site.Params.busuanzi.enable false }}
-  <div class="busuanzi-page" aria-label="本文阅读量">
-    <span id="busuanzi_container_page_pv">
-      阅读 <span id="busuanzi_value_page_pv"></span> 次
-    </span>
+  {{- with site.Params.goatcounter.code }}
+  <div class="gc-page" id="gc-page" hidden aria-label="本文阅读量">
+    阅读 <span id="gc-page-views"></span> 次
   </div>
+  <script>
+    (function () {
+      var code = {{ . | jsonify }};
+      var url = "https://" + code + ".goatcounter.com/counter/" +
+        encodeURIComponent(location.pathname) + ".json";
+      fetch(url).then(function (r) { return r.json(); }).then(function (d) {
+        var box = document.getElementById("gc-page");
+        var el = document.getElementById("gc-page-views");
+        if (!box || !el || !d || d.count == null) return;
+        el.textContent = d.count;
+        box.hidden = false;
+      }).catch(function () {});
+    })();
+  </script>
   {{- end }}
 
   {{- if .Content }}
