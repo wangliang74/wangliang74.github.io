@@ -1,0 +1,33 @@
+{{- $label := .label | default "阅读" -}}
+{{- $total := .total -}}
+{{- with site.Params.goatcounter.code }}
+<div class="gc-page{{ if $total }} gc-total{{ end }}" hidden{{ if $total }} data-gc-path="TOTAL"{{ end }} aria-label="{{ if $total }}总访问量和总访问人数{{ else }}{{ $label }}{{ end }}">
+  {{- if $total }}
+  总访问量 <span class="gc-pv"></span> 次 · 总访问人数 <span class="gc-uv"></span> 人
+  {{- else }}
+  {{ $label }} <span class="gc-page-views"></span> 次
+  {{- end }}
+</div>
+<script>
+  (function (box) {
+    if (!box) return;
+    var path = box.getAttribute("data-gc-path") || location.pathname;
+    var url = "https://{{ . }}.goatcounter.com/counter/" + encodeURIComponent(path) + ".json";
+    fetch(url).then(function (r) { return r.json(); }).then(function (d) {
+      if (!d || d.count == null) return;
+      if (path === "TOTAL") {
+        var pv = box.querySelector(".gc-pv");
+        var uv = box.querySelector(".gc-uv");
+        if (!pv || !uv || d.count_unique == null) return;
+        pv.textContent = d.count;
+        uv.textContent = d.count_unique;
+      } else {
+        var el = box.querySelector(".gc-page-views");
+        if (!el) return;
+        el.textContent = d.count;
+      }
+      box.hidden = false;
+    }).catch(function () {});
+  })(document.currentScript && document.currentScript.previousElementSibling);
+</script>
+{{- end }}

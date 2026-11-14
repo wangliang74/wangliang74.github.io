@@ -4,3 +4,12 @@
   font-size: 0.8125rem;
   color: var(--secondary);
 }
+
+.footer .gc-page.gc-total {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+}
