@@ -34,6 +34,9 @@ body.tech-site {
 }
 
 body.tech-site .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   backdrop-filter: blur(10px);
   background: color-mix(in srgb, var(--theme) 88%, transparent);
   border-bottom: 1px solid var(--tech-accent-dim);

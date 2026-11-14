@@ -22,6 +22,7 @@
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
+      {{- partial "goatcounter_views.html" (dict "label" "阅读") }}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
@@ -30,8 +31,6 @@
   </header>
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
-
-  {{- partial "goatcounter_views.html" (dict "label" "阅读") }}
 
   {{- if .Content }}
   <div class="post-content md-content">

@@ -5,11 +5,18 @@
   color: var(--secondary);
 }
 
-.footer .gc-page.gc-total {
-  display: block;
+.post-meta .gc-page {
+  display: inline;
   margin: 0;
-  font-size: 12px;
-  line-height: 24px;
-  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.footer .gc-page.gc-total {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
   white-space: nowrap;
 }

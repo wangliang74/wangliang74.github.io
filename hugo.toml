@@ -11,7 +11,8 @@ hasCJKLanguage = true
 [params]
   env = 'production'
   defaultTheme = 'dark'
-  ShowReadingTime = true
+  ShowReadingTime = false
+  DateFormat = "2006年1月2日 15:04"
   ShowBreadCrumbs = false
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true

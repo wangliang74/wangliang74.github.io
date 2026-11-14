@@ -1,13 +1,11 @@
 {{- $label := .label | default "阅读" -}}
 {{- $total := .total -}}
 {{- with site.Params.goatcounter.code }}
-<div class="gc-page{{ if $total }} gc-total{{ end }}" hidden{{ if $total }} data-gc-path="TOTAL"{{ end }} aria-label="{{ if $total }}总访问量和总访问人数{{ else }}{{ $label }}{{ end }}">
-  {{- if $total }}
-  总访问量 <span class="gc-pv"></span> 次 · 总访问人数 <span class="gc-uv"></span> 人
-  {{- else }}
-  {{ $label }} <span class="gc-page-views"></span> 次
-  {{- end }}
-</div>
+{{- if $total }}
+<span class="gc-page gc-total" hidden data-gc-path="TOTAL" aria-label="总访问量"> · 总访问量 <span class="gc-pv"></span> 次</span>
+{{- else }}
+<span class="gc-page" hidden aria-label="{{ $label }}"> · {{ $label }} <span class="gc-page-views"></span> 次</span>
+{{- end }}
 <script>
   (function (box) {
     if (!box) return;
@@ -17,10 +15,8 @@
       if (!d || d.count == null) return;
       if (path === "TOTAL") {
         var pv = box.querySelector(".gc-pv");
-        var uv = box.querySelector(".gc-uv");
-        if (!pv || !uv || d.count_unique == null) return;
+        if (!pv) return;
         pv.textContent = d.count;
-        uv.textContent = d.count_unique;
       } else {
         var el = box.querySelector(".gc-page-views");
         if (!el) return;
